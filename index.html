@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Norwegens Fjorde ab Warnemünde</title>
+<meta name="description" content="Unsere Kreuzfahrt mit der AIDAdiva – Route, Reiseplan und Wetter unterwegs.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚓</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="page-header">
+  <p class="eyebrow">Ihre Route</p>
+  <h1>Norwegens Fjorde ab Warnemünde</h1>
+  <p class="subtitle">01.08.2026 – 08.08.2026 · 7 Tage mit AIDAdiva</p>
+</header>
+
+<section class="hero-weather" id="hero-weather" aria-live="polite">
+  <p class="loading">Wetterdaten werden geladen …</p>
+</section>
+
+<main>
+  <section class="map-section">
+    <h2>Die Route</h2>
+    <div id="map"></div>
+  </section>
+
+  <section class="itinerary-section">
+    <h2>Reiseplan</h2>
+    <div class="table-wrap">
+      <table class="itinerary-table">
+        <thead>
+          <tr><th>Datum</th><th>Land / Insel</th><th>Hafen</th></tr>
+        </thead>
+        <tbody id="itinerary-body"></tbody>
+      </table>
+    </div>
+    <p class="footnote">⚓ Bei einzelnen Anläufen kann es sich kurzfristig um einen Reedehafen handeln – Ankerplatz vor dem eigentlichen Hafen, Boot-Transfer an Land.</p>
+  </section>
+
+  <section class="weather-section">
+    <h2>Wetter unterwegs</h2>
+    <div class="weather-slider" id="weather-slider">
+      <p class="loading">Wetterdaten werden geladen …</p>
+    </div>
+  </section>
+</main>
+
+<footer class="page-footer">
+  <p>Für die Familie gemacht ⚓ — Gute Reise!</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

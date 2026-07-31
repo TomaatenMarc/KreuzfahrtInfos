@@ -55,6 +55,20 @@
   <p>Für die Familie ⚓ — Gute Reise!</p>
 </footer>
 
+<div class="modal-backdrop" id="modal-backdrop" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Schließen">&times;</button>
+    <p class="modal-date" id="modal-date"></p>
+    <h3 id="modal-title"></h3>
+    <div class="hero-weather-main">
+      <span class="hero-icon" id="modal-icon"></span>
+      <span class="hero-temp" id="modal-temp"></span>
+    </div>
+    <p class="modal-desc" id="modal-desc"></p>
+    <div class="modal-stats" id="modal-stats"></div>
+  </div>
+</div>
+
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="app.js"></script>
 </body>

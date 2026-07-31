@@ -80,6 +80,9 @@ h1, h2 {
 .hero-temp { font-size: 2.25rem; font-weight: 700; color: var(--navy); }
 .hero-sub { margin: 0.35rem 0 0; color: var(--muted); }
 
+.hero-inner.clickable { cursor: pointer; }
+.hero-inner.clickable:hover .hero-label { color: var(--coral); }
+
 .loading { color: var(--muted); text-align: center; padding: 1rem; }
 
 /* Main sections */
@@ -166,7 +169,11 @@ section h2 {
   box-shadow: var(--shadow);
   padding: 1rem;
   text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s ease;
 }
+
+.weather-card:hover { transform: translateY(-3px); }
 
 .weather-card.is-today {
   border: 2px solid var(--coral);
@@ -177,6 +184,64 @@ section h2 {
 .wc-icon { font-size: 2rem; display: block; }
 .wc-temp { margin: 0.35rem 0 0; font-weight: 700; }
 .wc-desc { margin: 0.2rem 0 0; font-size: 0.8rem; color: var(--muted); }
+.wc-approx { margin: 0.2rem 0 0; font-size: 0.7rem; color: var(--sky); background: var(--navy); display: inline-block; padding: 0.1rem 0.5rem; border-radius: 999px; }
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 37, 69, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 100;
+}
+
+.modal-backdrop[hidden] { display: none; }
+
+.modal {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.75rem;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--muted);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-date { margin: 0; font-size: 0.8rem; color: var(--muted); }
+.modal h3 { font-size: 1.3rem; color: var(--navy); margin: 0.25rem 0 0.75rem; }
+.modal-desc { color: var(--muted); margin: 0.35rem 0 1.25rem; }
+
+.modal-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.stat {
+  background: #f8fafb;
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+}
+
+.stat-label { display: block; font-size: 0.72rem; color: var(--muted); }
+.stat-value { display: block; font-weight: 700; color: var(--navy); margin-top: 0.1rem; }
 
 /* Footer */
 .page-footer {
